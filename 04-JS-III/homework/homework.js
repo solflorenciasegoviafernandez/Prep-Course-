@@ -39,7 +39,7 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.lenght=alemento]
+  array[array.lenght=elemento]
     return array;
 
 
@@ -63,7 +63,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  return palabras.join("")
+  return palabras.join(" ")
 }
 
 
@@ -86,9 +86,9 @@ function agregarNumeros(numeros) {
   // Tu código:
   var suma = 0;
   for(var i = 0; i < numeros.length; i++) {
-    suma = suma + numeros[i];
+    resultado = suma + numeros[i];
   }
-  return suma;
+  return resultado;
 }
 
 
@@ -104,23 +104,29 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var maximo =[0];
+  var maximo = numeros[0];
   for(var i = 1; i < numeros.lenght; i++){
-    maximo = numeros[i]
-  } return maximo;
+    if(numeros[i]>maximo){
+      maximo=numeros[i];
+    }
 }
-
+return maximo;
+}
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
-  // Escribe tu código aquí
-  if(arguments.length < 1) return 0;
-  var total = 1;
-  for(var i = 0; i < arguments.length; i++) {
-    total = total * arguments[i];
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Escribe tu código aquí:
+var numero=1;
+for(var i=0;i< arguments.length;i++){
+  numero=numero*arguments[i]
+  if(arguments.length<1){
+    return 0;
+  }else{
+    return numero;
   }
-  return total;
+}
+
 
 }
 
@@ -220,7 +226,7 @@ function breakStatement(numero) {
   // Tu código:
   var array = [];
   var suma = numero;
-  for(var i= 0; i<10; i++) {
+  for(var i= 0; i<11; i++) {
     suma = suma + 2;
     if(suma === i) break;
     else {
@@ -245,7 +251,7 @@ function continueStatement(numero) {
   // Tu código:
   var array = [];
   var suma = numero;
-  for(var i= 0; i<10; i++) {
+  for(var i= 0; i<11; i++) {
     if(i === 5) continue;
     else {
       suma = suma + 2;
